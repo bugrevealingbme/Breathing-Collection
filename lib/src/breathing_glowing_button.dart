@@ -29,14 +29,14 @@ class BreathingGlowingButton extends StatefulWidget {
   /// Icon inside the button.
   ///
   /// Default value: Icons.mic.
-  final IconData? icon;
+  final IconData? icon  = Icons.mic;
 
   final Widget? widgetP;
 
   /// The color of the icon.
   ///
   /// Default [iconColor] value: Colors.white.
-  final Color? iconColor;
+  final Color? iconColor = Colors.white;
 
   /// Function to be executed onTap.
   ///
