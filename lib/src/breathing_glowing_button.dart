@@ -107,7 +107,7 @@ class _BreathingGlowingButtonState extends State<BreathingGlowingButton>
       child: Container(
         width: _width,
         height: _height,
-        child: _widget
+        child: _widget,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: _buttonBackgroundColor,
