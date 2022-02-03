@@ -31,6 +31,8 @@ class BreathingGlowingButton extends StatefulWidget {
   /// Default value: Icons.mic.
   final IconData? icon;
 
+  final Widget? widgetP;
+
   /// The color of the icon.
   ///
   /// Default [iconColor] value: Colors.white.
@@ -46,8 +48,7 @@ class BreathingGlowingButton extends StatefulWidget {
     this.height,
     this.buttonBackgroundColor,
     this.glowColor,
-    this.icon,
-    this.iconColor,
+    this.widgetP,
     this.onTap,
   });
 
@@ -94,6 +95,7 @@ class _BreathingGlowingButtonState extends State<BreathingGlowingButton>
     final Color _glowColor = widget.glowColor ?? Color(0xFF777AF9);
     final IconData _icon = widget.icon ?? Icons.mic;
     final Color _iconColor = widget.iconColor ?? Colors.white;
+    final Widget _widget = widget.widgetP ?? Text("GO");
     final Function _onTap = widget.onTap ?? () {};
 
     /// A simple breathing glowing button.
@@ -105,10 +107,7 @@ class _BreathingGlowingButtonState extends State<BreathingGlowingButton>
       child: Container(
         width: _width,
         height: _height,
-        child: Icon(
-          _icon,
-          color: _iconColor,
-        ),
+        child: _widget
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: _buttonBackgroundColor,
